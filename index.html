@@ -27,6 +27,16 @@
             height: 100%;
             object-fit: cover;
         }
+
+        /* Ensure the video looks good on mobile devices */
+        @media screen and (max-width: 768px) {
+            .video-container video {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
         header {
             text-align: center;
             padding: 100px 20px;
@@ -82,13 +92,15 @@
     <div class="video-container">
         <video autoplay muted loop>
             <source src="fondodinamico.mp4" type="video/mp4">
+            <source src="fondodinamico.webm" type="video/webm">
+            <source src="fondodinamico.ogv" type="video/ogg">
             Your browser does not support the video tag.
         </video>
     </div>
 
     <header>
         <h1>Servidor Squad</h1>
-        <p>Apoya nuestro servidor y forma parte de la comunidad.</p>
+        <p>Apoya nuestro servidor y forma parte del escuadrón.</p>
     </header>
     <section>
         <h2>Contribuye con una donación</h2>
@@ -105,5 +117,6 @@
     </footer>
 </body>
 </html>
+
 
        
